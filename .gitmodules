@@ -1,0 +1,15 @@
+[submodule "hecks-domain"]
+	path = hecks-domain
+	url = https://github.com/thehecksteam/hecks-domain.git
+[submodule "examples/lean_coffee"]
+	path = examples/lean_coffee
+	url = ../hecks-examples/lean_coffee
+[submodule "adapters/dynamodb"]
+	path = adapters/dynamodb
+	url = ../hecks-adapters-dynamodb/
+[submodule "examples/soccer_season"]
+	path = examples/soccer_season
+	url = ../hecks-examples/soccer_season/
+[submodule "hecks-app"]
+	path = hecks-app
+	url = ../hecks-app/

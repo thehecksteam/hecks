@@ -1,0 +1,7 @@
+require_relative 'commands/new'
+require_relative 'commands/examples'
+require_relative 'commands/gems'
+require_relative 'commands/ci'
+require_relative 'commands/adapters'
+require_relative 'commands/app'
+require_relative 'commands/domain_commands'
