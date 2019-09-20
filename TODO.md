@@ -18,7 +18,6 @@
 
 # Domain
 1. Use build factories in tests instead of default
-1. Create commands that dont already exist
 1. Option to overwrite commands
 1. Generate spec files for commands
 1. Values are immutable, so provide equality
