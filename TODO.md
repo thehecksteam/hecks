@@ -1,14 +1,18 @@
-# General
+# TODO
+A prioritized list of work
+
+## General
+1. Add License File to all the projects
 1. Setup metrics
 1. Test everything
 
-# Hecks
+## Hecks
 1. Best way to run specs in ci?
 
-# Hecks ActiveModel
+## Hecks ActiveModel
 1. Create a test app
 
-# App
+## App
 1. Work on nicer API for DOMAIN_SCHEMA
 1. What does a data port look like?
 1. Make a Logger Driven Adapter
@@ -19,7 +23,7 @@
 1. Make a Command Bus
 1. Create a facilitator app
 
-# Domain
+## Domain
 1. Use build factories in tests instead of default
 1. Option to overwrite commands
 1. Clean up filemaker
@@ -33,5 +37,5 @@
 1. Replay commands
 1. Generate a Java Domain
 
-# Rails
+## Rails
 1. Generate Rails initializer
