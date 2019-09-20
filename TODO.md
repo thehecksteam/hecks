@@ -4,6 +4,7 @@
 
 # Hecks
 1. Clean up warnings when building gems
+1. Suppress docs generation building gems
 
 # App
 1. Make a Command Bus
@@ -16,7 +17,7 @@
 1. Generate a CRUD server (or make a generic one)
 
 # Domain
-1. Generate Build factories (rename default to build)
+1. Use build factories in tests instead of default
 1. Create commands that dont already exist
 1. Option to overwrite commands
 1. Generate spec files for commands
