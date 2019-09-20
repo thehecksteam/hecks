@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     hecks (0.1.0)
       hecks-adapters-dynamodb

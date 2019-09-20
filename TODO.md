@@ -5,6 +5,7 @@
 # Hecks
 1. Clean up warnings when building gems
 1. Suppress docs generation building gems
+1. Best way to run specs in ci?
 
 # App
 1. Make a Command Bus
@@ -17,6 +18,7 @@
 1. Generate a CRUD server (or make a generic one)
 
 # Domain
+1. Why does loading colorize sometimes fail?
 1. Use build factories in tests instead of default
 1. Option to overwrite commands
 1. Generate spec files for commands
