@@ -13,3 +13,6 @@
 [submodule "hecks-app"]
 	path = hecks-app
 	url = ../hecks-app/
+[submodule "examples/lean_coffee_rails"]
+	path = examples/lean_coffee_rails
+	url = git@github.com:thehecksteam/hecks-examples-lean_coffee_rails.git
