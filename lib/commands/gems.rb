@@ -14,11 +14,11 @@ class Gems < Thor
 
   desc 'install', ''
   def install
-    puts `gem install *.gem`
-    puts `cd hecks-domain && gem install *.gem`
-    puts `cd hecks-app && gem install *.gem`
-    puts `cd adapters/dynamodb && gem install *.gem`
-    puts `cd examples/soccer_season && gem install *.gem`
-    puts `cd examples/lean_coffee && gem install *.gem`
+    puts `gem install --no-document *.gem`
+    puts `cd hecks-domain && gem install --no-document *.gem`
+    puts `cd hecks-app && gem install --no-document *.gem`
+    puts `cd adapters/dynamodb && gem install --no-document *.gem`
+    puts `cd examples/soccer_season && gem install --no-document *.gem`
+    puts `cd examples/lean_coffee && gem install --no-document *.gem`
   end
 end

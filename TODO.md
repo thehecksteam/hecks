@@ -8,6 +8,7 @@
 1. Best way to run specs in ci?
 
 # App
+1. Work on nicer API for DOMAIN_SCHEMA
 1. Make a Command Bus
 1. Create a facilitator app
 1. What does a data port look like?

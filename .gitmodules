@@ -16,3 +16,6 @@
 [submodule "examples/lean_coffee_rails"]
 	path = examples/lean_coffee_rails
 	url = git@github.com:thehecksteam/hecks-examples-lean_coffee_rails.git
+[submodule "hecks-active_model"]
+	path = hecks-active_model
+	url = git@github.com:thehecksteam/hecks-active_model.git
