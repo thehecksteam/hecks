@@ -24,8 +24,11 @@ A prioritized list of work
 1. Generate a CRUD server (or make a generic one)
 1. Make a Command Bus
 1. Create a facilitator app
+1. Generate and test Pizzeria
 
 ## Domain
+1. Basic types in lists
+1. Default Values
 1. Use build factories in tests instead of default
 1. Option to overwrite commands
 1. Clean up filemaker
