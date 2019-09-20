@@ -5,6 +5,9 @@
 # Hecks
 1. Best way to run specs in ci?
 
+# Hecks ActiveModel
+1. Create a test app
+
 # App
 1. Work on nicer API for DOMAIN_SCHEMA
 1. What does a data port look like?
