@@ -5,6 +5,8 @@ A prioritized list of work
 1. Add License File to all the projects
 1. Setup metrics
 1. Test everything
+1. Should I use pizzeria for all the examples?
+1. Add Pizzeria to the build
 
 ## Hecks
 1. Best way to run specs in ci?
