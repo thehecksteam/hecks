@@ -10,8 +10,20 @@ A prioritized list of work
 
 ## Hecks
 1. Best way to run specs in ci?
+1. Rename
+  * hecks/hecks-domain > hecks/domain
+  * hecks/hecks-app > hecks/app
+ ```ruby
+    Hecks::App.config do 
+      Domain.config do
+      # ...
+      adapter :ActiveModel
+    end
+```
 
 ## Hecks ActiveModel
+1. hecks/hecks-active_model > hecks/app/adapters/active_model
+  
 1. Create a test app
 
 ## App
