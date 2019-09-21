@@ -10,6 +10,7 @@ class Gems < Thor
     puts `cd adapters/dynamodb && gem build hecks-adapters-dynamodb`
     puts `cd examples/soccer_season && gem build soccer_season`
     puts `cd examples/lean_coffee && gem build lean_coffee`
+    puts `cd hecks-active_model && gem build hecks-active_model`
   end
 
   desc 'install', ''
@@ -20,5 +21,6 @@ class Gems < Thor
     puts `cd adapters/dynamodb && gem install --no-document *.gem`
     puts `cd examples/soccer_season && gem install --no-document *.gem`
     puts `cd examples/lean_coffee && gem install --no-document *.gem`
+    puts `cd hecks-active_model && gem install --no-document *.gem`
   end
 end

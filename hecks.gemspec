@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.executables = ['hecks']
   s.homepage    = 'http://www.example.com'
 
-  s.add_dependency 'hecks-adapters-dynamodb', '~> 0.1.0'
-  s.add_dependency 'hecks-app', '~> 0.1.0'
-  s.add_dependency 'hecks-domain', '~> 0.1.0'
-  s.add_dependency 'soccer_season', '~> 0.1.0'
+  s.add_dependency 'hecks-adapters-dynamodb', '0.1.0'
+  s.add_dependency 'hecks-app', '0.1.0'
+  s.add_dependency 'hecks-domain', '0.1.0'
+  s.add_dependency 'soccer_season', '0.1.0'
 end
