@@ -1,22 +1,32 @@
+# In Progress
+Domain: Promote DomainObject to Root
+
+<!-- TOC -->
+
+- [In Progress](#in-progress)
+- [Bugs](#bugs)
+- [HecksOnRails](#hecksonrails)
+- [General](#general)
+- [Hecks](#hecks)
+
+<!-- /TOC -->
+
 # Bugs
 DOMAIN_SCHEMA.as_json results in infinate loop
 
-# TODO
-
-1. Stay in the hecks project root and run all helpful dev tools from there.
-
-## HecksOnRails
+# HecksOnRails
   * Easy admin interface
   * /hecks_domain shows domain info
 
-## General
+# General
 1. Add License File to all the projects
 1. Setup metrics
 1. Test everything
 1. Should I use pizzeria for all the examples?
 1. Add Pizzeria to the build
 
-## Hecks
+# Hecks
+1. Stay in the hecks project root and run all helpful dev tools from there.
 1. /Projects > hecks domain new
 
 1. Best way to run specs in ci?
@@ -31,12 +41,12 @@ DOMAIN_SCHEMA.as_json results in infinate loop
     end
 ```
 
-## Hecks ActiveModel
+# Hecks ActiveModel
 1. hecks/hecks-active_model > hecks/app/adapters/active_model
   
 1. Create a test app
 
-## App
+# App
 1. Use Hecks::App
 1. Work on nicer API for DOMAIN_SCHEMA
 1. What does a data port look like?
@@ -49,7 +59,9 @@ DOMAIN_SCHEMA.as_json results in infinate loop
 1. Create a facilitator app
 1. Generate and test Pizzeria
 
-## Domain
+# Domain
+1. Refactoring Commands
+  * #promote_entity_to_aggregate
 1. Stop Referencing parents in the schema, ie domain_object should know nothing about aggregate
 1. Basic types in lists
 1. Default Values
@@ -66,10 +78,10 @@ DOMAIN_SCHEMA.as_json results in infinate loop
 1. Replay commands
 1. Generate a Java Domain
 
-## Rails
+# Rails
 1. Generate Rails initializer
 
-## LeanCoffee
+# LeanCoffee
 1. Promote Participants to an aggregate
 2. Delete Timer Service
 3. Delete Timebox Service
