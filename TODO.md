@@ -1,6 +1,9 @@
 # TODO
 A prioritized list of work
 
+## Unsorted
+1. Stay in the hecks project root and run all helpful dev tools from there.
+
 ## General
 1. Add License File to all the projects
 1. Setup metrics
@@ -39,6 +42,7 @@ A prioritized list of work
 1. Generate and test Pizzeria
 
 ## Domain
+1. Stop Referencing parents in the schema, ie domain_object should know nothing about aggregate
 1. Basic types in lists
 1. Default Values
 1. Use build factories in tests instead of default
@@ -56,3 +60,8 @@ A prioritized list of work
 
 ## Rails
 1. Generate Rails initializer
+
+## LeanCoffee
+1. Promote Participants to an aggregate
+2. Delete Timer Service
+3. Delete Timebox Service
