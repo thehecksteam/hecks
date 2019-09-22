@@ -47,6 +47,13 @@ DOMAIN_SCHEMA.as_json results in infinate loop
 1. Create a test app
 
 # App
+```ruby
+  Domain[:AddParticipantToMeeting].with do
+        participant: <participant>,
+        meeting: { id: 123456 }
+  end
+```
+
 1. Use Hecks::App
 1. Work on nicer API for DOMAIN_SCHEMA
 1. What does a data port look like?
