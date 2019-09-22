@@ -1,5 +1,10 @@
+# Bugs
+DOMAIN_SCHEMA.as_json results in infinate loop
+
 # TODO
 A prioritized list of work
+HecksOnRails
+  * Easy admin interface
 
 ## Unsorted
 1. Stay in the hecks project root and run all helpful dev tools from there.
@@ -12,6 +17,8 @@ A prioritized list of work
 1. Add Pizzeria to the build
 
 ## Hecks
+1. /Projects > hecks domain new
+
 1. Best way to run specs in ci?
 1. Rename
   * hecks/hecks-domain > hecks/domain
