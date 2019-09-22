@@ -2,12 +2,12 @@
 DOMAIN_SCHEMA.as_json results in infinate loop
 
 # TODO
-A prioritized list of work
-HecksOnRails
-  * Easy admin interface
 
-## Unsorted
 1. Stay in the hecks project root and run all helpful dev tools from there.
+
+## HecksOnRails
+  * Easy admin interface
+  * /hecks_domain shows domain info
 
 ## General
 1. Add License File to all the projects
