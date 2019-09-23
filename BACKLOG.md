@@ -1,8 +1,6 @@
-# In Progress
-Domain: Promote DomainObject to Root
-
 <!-- TOC -->
 
+- [New](#new)
 - [In Progress](#in-progress)
 - [Bugs](#bugs)
 - [HecksOnRails](#hecksonrails)
@@ -10,6 +8,14 @@ Domain: Promote DomainObject to Root
 - [Hecks](#hecks)
 
 <!-- /TOC -->
+
+# New
+* Add an examples project
+* Add an adapters project
+* Add a plugins project that includes hecks_activemodel
+
+# In Progress
+* Domain: Promote DomainObject to Root
 
 # Bugs
 DOMAIN_SCHEMA.as_json results in infinate loop
