@@ -13,6 +13,7 @@ Domain: Promote DomainObject to Root
 
 # Bugs
 DOMAIN_SCHEMA.as_json results in infinate loop
+id reader is being added twice when generating entities
 
 # HecksOnRails
   * Easy admin interface
@@ -49,8 +50,8 @@ DOMAIN_SCHEMA.as_json results in infinate loop
 # App
 ```ruby
   Domain[:AddParticipantToMeeting].with do
-        participant: <participant>,
-        meeting: { id: 123456 }
+    participant: <participant>,
+    meeting: { id: 123456 }
   end
 ```
 
