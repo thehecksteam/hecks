@@ -18,7 +18,6 @@
 
 # In Progress
 
-
 # Bugs
 * DOMAIN_SCHEMA.as_json results in infinate loop
 * id reader is being added twice when generating entities
@@ -76,8 +75,6 @@
 1. Generate and test Pizzeria
 
 # Domain
-1. Refactoring Commands
-  * #promote_entity_to_aggregate
 1. Stop Referencing parents in the schema, ie domain_object should know nothing about aggregate
 1. Basic types in lists
 1. Default Values
@@ -99,6 +96,4 @@
 
 # Lean Coffee
 1. Should be able to vote more than once for the same topic
-1. Promote Participants to an aggregate
 1. Delete Timer Service
-1. Delete Timebox Service

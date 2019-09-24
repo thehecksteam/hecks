@@ -5,11 +5,12 @@ class Examples < Thor
 
   desc 'generate', ''
   def generate
+    require_relative '../domain'
     Dir.chdir 'examples/lean_coffee'
-    Hecks.new.new
+    Hecks.new.generate
     Dir.chdir '../..'
     Dir.chdir 'examples/soccer_season'
-    Hecks.new.new
+    Hecks.new.generate
     Dir.chdir '../..'
   end
 

@@ -1,3 +1,5 @@
+
+
 # A CLI interface for generating domains
 class CI < Thor
   package_name 'Hecks'

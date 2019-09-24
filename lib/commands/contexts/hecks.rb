@@ -1,3 +1,12 @@
+require_relative 'hecks/examples'
+require_relative 'hecks/gems'
+require_relative 'hecks/ci'
+require_relative 'hecks/adapters'
+require_relative 'hecks/app'
+require_relative 'hecks/active_model_commands'
+require_relative 'hecks/domain_commands'
+
+
 # A CLI interface for generating domains
 class Hecks < Thor
   desc 'gem', 'commands to build the gem'

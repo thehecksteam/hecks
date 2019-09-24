@@ -2,5 +2,13 @@
 
 require 'thor'
 require 'hecks/domain'
-require_relative '../lib/commands'
+
+if File.exist?('hecks.gemspec')
+  require_relative '../lib/commands/contexts/hecks'
+elsif File.exist?('Domainfile')
+  require_relative '../lib/commands/contexts/domain'
+else
+  require_relative '../lib/commands/contexts/default'
+end
+
 Hecks.start
