@@ -3,16 +3,16 @@
 	url = https://github.com/thehecksteam/hecks-domain.git
 [submodule "examples/lean_coffee"]
 	path = examples/lean_coffee
-	url = ../hecks-examples/lean_coffee
+	url = https://github.com/thehecksteam/hecks-examples_lean_coffee.git
 [submodule "adapters/dynamodb"]
 	path = adapters/dynamodb
-	url = ../hecks-adapters-dynamodb/
+	url = https://github.com/thehecksteam/hecks-adapters_dynamodb.git
 [submodule "examples/soccer_season"]
 	path = examples/soccer_season
-	url = ../hecks-examples/soccer_season/
+	url = https://github.com/thehecksteam/hecks-examples_soccer-season.git
 [submodule "hecks-app"]
 	path = hecks-app
-	url = ../hecks-app/
+	url = https://github.com/thehecksteam/hecks-app.git
 [submodule "examples/lean_coffee_rails"]
 	path = examples/lean_coffee_rails
 	url = git@github.com:thehecksteam/hecks-examples-lean_coffee_rails.git
