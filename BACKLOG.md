@@ -1,8 +1,6 @@
-# In Progress
-Domain: Promote DomainObject to Root
-
 <!-- TOC -->
 
+- [New](#new)
 - [In Progress](#in-progress)
 - [Bugs](#bugs)
 - [HecksOnRails](#hecksonrails)
@@ -11,8 +9,19 @@ Domain: Promote DomainObject to Root
 
 <!-- /TOC -->
 
+# New
+* Add an examples project
+* Add an adapters project
+* Add a plugins project that includes hecks_activemodel
+* Blow up if a Domain Version isn't supplied on generation
+* `hecks new` generates a Domainfile if one doesn't already exist
+
+# In Progress
+
+
 # Bugs
-DOMAIN_SCHEMA.as_json results in infinate loop
+* DOMAIN_SCHEMA.as_json results in infinate loop
+* id reader is being added twice when generating entities
 
 # HecksOnRails
   * Easy admin interface
@@ -34,11 +43,11 @@ DOMAIN_SCHEMA.as_json results in infinate loop
   * hecks/hecks-domain > hecks/domain
   * hecks/hecks-app > hecks/app
  ```ruby
-    Hecks::App.config do 
-      Domain.config do
-      # ...
-      adapter :ActiveModel
-    end
+  Hecks::App.config do 
+    Domain.config do
+    # ...
+    adapter :ActiveModel
+  end
 ```
 
 # Hecks ActiveModel
@@ -47,6 +56,13 @@ DOMAIN_SCHEMA.as_json results in infinate loop
 1. Create a test app
 
 # App
+```ruby
+  Domain[:AddParticipantToMeeting].with do
+    participant: <participant>,
+    meeting: { id: 123456 }
+  end
+```
+
 1. Use Hecks::App
 1. Work on nicer API for DOMAIN_SCHEMA
 1. What does a data port look like?
@@ -81,7 +97,8 @@ DOMAIN_SCHEMA.as_json results in infinate loop
 # Rails
 1. Generate Rails initializer
 
-# LeanCoffee
+# Lean Coffee
+1. Should be able to vote more than once for the same topic
 1. Promote Participants to an aggregate
-2. Delete Timer Service
-3. Delete Timebox Service
+1. Delete Timer Service
+1. Delete Timebox Service
