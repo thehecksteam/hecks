@@ -13,13 +13,15 @@
 * Add an examples project
 * Add an adapters project
 * Add a plugins project that includes hecks_activemodel
+* Blow up if a Domain Version isn't supplied on generation
+* `hecks new` generates a Domainfile if one doesn't already exist
 
 # In Progress
-* Domain: Promote DomainObject to Root
+
 
 # Bugs
-DOMAIN_SCHEMA.as_json results in infinate loop
-id reader is being added twice when generating entities
+* DOMAIN_SCHEMA.as_json results in infinate loop
+* id reader is being added twice when generating entities
 
 # HecksOnRails
   * Easy admin interface
@@ -41,11 +43,11 @@ id reader is being added twice when generating entities
   * hecks/hecks-domain > hecks/domain
   * hecks/hecks-app > hecks/app
  ```ruby
-    Hecks::App.config do 
-      Domain.config do
-      # ...
-      adapter :ActiveModel
-    end
+  Hecks::App.config do 
+    Domain.config do
+    # ...
+    adapter :ActiveModel
+  end
 ```
 
 # Hecks ActiveModel
@@ -95,7 +97,8 @@ id reader is being added twice when generating entities
 # Rails
 1. Generate Rails initializer
 
-# LeanCoffee
+# Lean Coffee
+1. Should be able to vote more than once for the same topic
 1. Promote Participants to an aggregate
-2. Delete Timer Service
-3. Delete Timebox Service
+1. Delete Timer Service
+1. Delete Timebox Service

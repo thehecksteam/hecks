@@ -9,10 +9,11 @@ Hecks is a suite of tools for developing Domains and using them with Hexagonal A
   - [Generating your Domain](#generating-your-domain)
     - [Quick Start](#quick-start)
   - [Building and Testing Hecks](#building-and-testing-hecks)
-- [Hecks Family of Projects](#hecks-family-of-projects)
+- [Hecks Projects](#hecks-projects)
   - [Hecks App](#hecks-app)
   - [Hecks Domain](#hecks-domain)
   - [Hecks Adapters](#hecks-adapters)
+  - [Hecks ActiveModel](#hecks-activemodel)
   - [Hecks Examples](#hecks-examples)
   - [Soccer Season](#soccer-season)
   - [Lean Coffee](#lean-coffee)
@@ -47,10 +48,11 @@ The `ci` command will build and test all of the projects.
 
 Default command for `hecks ci all`, which runs the following commands:   `gems build`, `gems install`, `examples generate`, `examples test`, `adapters test`, `app test`, `domain test`, `active_model test`
 
-# Hecks Family of Projects
+# Hecks Projects
 ## Hecks App
 ## Hecks Domain
 ## Hecks Adapters
+## Hecks ActiveModel
 ## Hecks Examples
 These examples exercise the DDD concepts.  They are working apps that you can review to understand how Hecks works
 ## [Soccer Season](https://github.com/thehecksteam/hecks-examples-soccer_season)
