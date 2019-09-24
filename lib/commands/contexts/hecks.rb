@@ -9,24 +9,24 @@ require_relative 'hecks/domain_commands'
 
 # A CLI interface for generating domains
 class Hecks < Thor
-  desc 'gem', 'commands to build the gem'
+  desc 'gem', 'build and install gems'
   subcommand 'gem', Gems
 
-  desc 'examples', 'commands to support building and testing with examples'
+  desc 'examples', 'test the examples'
   subcommand 'examples', Examples
 
-  desc 'ci', 'build and test things'
+  desc 'ci', 'build and test everything'
   subcommand 'ci', CI
 
-  desc 'adapters', 'commands to support building and testing with examples'
+  desc 'adapters', 'test the adapters'
   subcommand 'adapters', Adapters
 
-  desc 'app', 'commands to support building and testing app'
+  desc 'app', 'test the app'
   subcommand 'app', App
 
-  desc 'domain', 'commands to support building and testing domain'
+  desc 'domain', 'test the domain'
   subcommand 'domain_commands', DomainCommands
 
-  desc 'active_model', 'commands to support building and testing active_model'
+  desc 'active_model', 'build and test active_model'
   subcommand 'active_model_commands', ActiveModelCommands
 end
