@@ -3,8 +3,9 @@ class Hecks < Thor
   HECKS_FILE_NAME = 'Domainfile'.freeze
 
   desc 'new', 'Create a new domain project with some supporting files.  Especially the Domainfile'
+  method_option :domain_name, type: :string, aliases: '-d'
   def new
-    puts "Implement Me!"
+    puts "Implement me"
   end
 end
 

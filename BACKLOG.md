@@ -17,6 +17,7 @@
 * `hecks new` generates a Domainfile if one doesn't already exist
 
 # In Progress
+* Command Contexts
 
 # Bugs
 * DOMAIN_SCHEMA.as_json results in infinate loop
@@ -62,7 +63,7 @@
   end
 ```
 
-1. Use Hecks::App
+1. Name Change: Hecks::App
 1. Work on nicer API for DOMAIN_SCHEMA
 1. What does a data port look like?
 1. Make a Logger Driven Adapter
@@ -75,6 +76,7 @@
 1. Generate and test Pizzeria
 
 # Domain
+1. Commands to generate factories, queries, services, etc
 1. Stop Referencing parents in the schema, ie domain_object should know nothing about aggregate
 1. Basic types in lists
 1. Default Values
