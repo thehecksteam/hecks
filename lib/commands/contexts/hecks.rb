@@ -6,7 +6,6 @@ require_relative 'hecks/app'
 require_relative 'hecks/active_model_commands'
 require_relative 'hecks/domain_commands'
 
-
 # A CLI interface for generating domains
 class Hecks < Thor
   desc 'gem', 'build and install gems'
