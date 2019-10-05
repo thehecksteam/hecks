@@ -7,16 +7,16 @@ This quickstart guide will show you how to create a simple domain using Hecks, c
 
 ## 1. Create a new project
 ```bash
-hecks new new foo
+hecks new new Blog
 ```
 This creates a new directory called foo with a Domainfile in it.
 ## 2. Define the domain
 ```ruby
 # foo/Domainfile
-domain :Foo do
+domain :Blog do
   #...
-  aggregate :Bars do
-    root :Bar do
+  aggregate :Users do
+    root :User do
       string :name
       operations [:UpdateName]
     end
@@ -31,7 +31,7 @@ This defines a `domain` called foo with an `aggregate` called Bars, and a `root`
 # spec/bars/bar_spec.rb
 require 'spec_helper'
 
-describe Foo::Domain::Bars::Bar do
+describe Blog::Domain::Bars::Bar do
   subject { described_class.new(name: 'Frog') }
   describe '#update_name' do
     it do
@@ -45,7 +45,6 @@ This test will fail because we haven't implemented the `#update_name!`
 
 ## 4. Implement `#update_name!`
 ```ruby
-
 class UpdateName
   attr_reader :root, :args
 
@@ -68,24 +67,28 @@ Running rspec should pass now.
 
 ## 5. Generate a Rails project
 ```bash
-rails new foo_rails
+rails new blog_rails
 ```
 
 ## 6. Add the domain and hecks libraries to the Gemfile
 ```ruby
-# foo_rails/Gemfile
-gem 'foo', path: '../foo'
+# blog_rails/Gemfile
+gem 'blog', path: '../blog'
 gem 'hecks-active_model', '0.1.0'
 gem 'hecks-adapters-dynamodb', '0.1.0'
+```
+then..
+```bash
+bundle
 ```
 
 ## 7. Configure the application
 ```ruby
-# foo_rails/config/initializers/domain.db
+# blog_rails/config/initializers/domain.db
 require 'hecks-adapters/dynamodb'
 Domain = HecksApp::ApplicationPort
 Domain.config do
-  domain Foo
+  domain Blog
   adapter :Dynamodb
 end
 Hecks::ActiveModel.decorate
@@ -93,42 +96,43 @@ Hecks::ActiveModel.decorate
 
 ## 8. Create a resource
 ```bash
-rails g resource bars/bar --no-migrations
+rails generate scaffold users/user --no-migration
 ```
 
 ## 9. Add a `#new` method to the controller
 ```ruby
-# foo_rails/app/controllers/bars/bar_controller.rb
-class Bars::BarsController < ApplicationController
+# blog_rails/app/controllers/users/users_controller.rb
+class Users::UsersController < ApplicationController
   def new
-    @bar = Domain[Bars: :Bar].build(name: nil)
+    @users_user = Domain[Users: :User].build(name: nil)
   end
 end
 ```
 
-## 10. Add a form
-```erb
-# foo_rails/app/views/bars/bars/new.html.erb
-<div class="container">
-  <h2>New Bar</h2>
-  <%= form_with model: @bar do |form| %>
-    <div class="form-group">
-      <%= label_tag(:name, "name:") %>
-      <%= form.text_field :name, class: "form-control" %>
-    </div>
-    <%= submit_tag nil, class: 'btn btn-primary' %>
-  <% end %>
-</div>
-```
-
 ## 11. Add a `#create` method to the controller
 ```ruby
-# foo_rails/app/controllers/bars/bar_controller.rb
+# blog_rails/app/controllers/bars/bar_controller.rb
 class Bars::BarsController < ApplicationController
   # ...
   def create
-    name = params.require(:bars_bar).permit(:name)[:name]
-    Domain[Bars: :Bar].build(name: name).save
+    @users_user = Domain[Users: :User].build(users_user_params.to_h.symbolize_keys)
+
+    respond_to do |format|
+      if Domain[@users_user].save
+        format.html { redirect_to @users_user, notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @users_user }
+      else
+        format.html { render :new }
+        format.json { render json: @users_user.errors, status: :unprocessable_entity }
+      end
+    end  
   end
+end
+```
+
+## 12. Add a `#show` method to the controller
+```ruby
+def index
+  @users_users = Domain[Users: :User].all
 end
 ```

@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     hecks (0.1.0)
       hecks-adapters-dynamodb (= 0.1.0)
@@ -29,13 +29,13 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     aws-eventstream (1.0.3)
-    aws-partitions (1.214.0)
-    aws-sdk-core (3.68.0)
+    aws-partitions (1.220.0)
+    aws-sdk-core (3.68.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-dynamodb (1.34.0)
+    aws-sdk-dynamodb (1.36.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
@@ -48,11 +48,11 @@ GEM
     hecks-adapters-dynamodb (0.1.0)
       activerecord (~> 5.2)
       aws-sdk-dynamodb (~> 1.34)
-    i18n (1.6.0)
+    i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     jmespath (1.4.0)
     method_source (0.9.2)
-    minitest (5.11.3)
+    minitest (5.12.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
