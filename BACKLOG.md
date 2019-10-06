@@ -10,12 +10,14 @@
 <!-- /TOC -->
 
 # New
+
+* option to skip existing files
+* pass directroy into generators so we don't have to `cd [directory]`
 * create scaffold for hecks
 * add pry to everything
 * How to do unique checks such as on team.name?
 * generate support files on `hecks generate new`
 * hecks console - loads the current domain in IRB
-* Dont let nil override default values
 * Add an examples project
 * Add an adapters project
 * Add a plugins project that includes hecks_activemodel
@@ -23,7 +25,7 @@
 * `hecks new` generates a Domainfile if one doesn't already exist
 
 # In Progress
-* Command Contexts
+* Dont let nil override default values in build factories
 
 # Bugs
 * DOMAIN_SCHEMA.as_json results in infinate loop
