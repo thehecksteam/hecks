@@ -15,9 +15,10 @@ class CI < Thor
   end
 
   desc 'examples', ''
-  def examples
+  method_option :skip_operations, default: true, type: :boolean
+  def examples(options)
     puts 'test examples'
-    Examples.new.tap do |examples|
+    Examples.new([], options).tap do |examples|
       examples.generate
       examples.test
     end
@@ -48,9 +49,10 @@ class CI < Thor
   end
 
   desc 'all', ''
+  method_option :skip_operations, default: true, type: :boolean
   def all
     gems
-    examples
+    examples(options)
     adapters
     app
     domain

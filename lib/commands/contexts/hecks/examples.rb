@@ -3,15 +3,16 @@ require 'rspec'
 require_relative '../domain'
 
 class Examples < Thor
-  EXAMPLES = %w[soccer_season lean_coffee].freeze
+  EXAMPLES = %w[soccer_season].freeze
   package_name 'Hecks'
 
   desc 'generate', ''
+  method_option :skip_operations, default: true, type: :boolean
   def generate
     EXAMPLES.each do |example|
       Dir.chdir "examples/#{example}"
       HecksDomain::Commands::Generate.new(
-        [:domain_from_domain_file]
+        [:domain_from_domain_file], options
       ).invoke_all
       Dir.chdir '../..'
     end
