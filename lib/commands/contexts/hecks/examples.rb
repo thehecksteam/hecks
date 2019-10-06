@@ -3,7 +3,7 @@ require 'rspec'
 require_relative '../domain'
 
 class Examples < Thor
-  EXAMPLES = %w[soccer_season].freeze
+  EXAMPLES = %w[soccer_season lean_coffee].freeze
   package_name 'Hecks'
 
   desc 'generate', ''
