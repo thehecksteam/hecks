@@ -96,7 +96,7 @@ Hecks::ActiveModel.decorate
 
 ## 8. Create a resource
 ```bash
-rails generate scaffold users/user --no-migration
+rails generate scaffold users/user --no-migration -o false
 ```
 
 ## 9. Add a `#new` method to the controller
