@@ -16,6 +16,7 @@ class CI < Thor
 
   desc 'examples', ''
   method_option :skip_operations, default: true, type: :boolean
+  method_option :skip_spec_generation, default: true, type: :boolean
   def examples(options)
     puts 'test examples'
     Examples.new([], options).tap do |examples|
@@ -50,6 +51,7 @@ class CI < Thor
 
   desc 'all', ''
   method_option :skip_operations, default: true, type: :boolean
+  method_option :skip_spec_generation, default: true, type: :boolean
   def all
     gems
     examples(options)
