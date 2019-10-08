@@ -46,7 +46,7 @@
 
 # Notes
 ```ruby
-  Domain**:AddParticipantToMeeting**
+  Domain(:AddParticipantToMeeting)
     participant: <participant>,
     meeting: { id: 123456 }
   end

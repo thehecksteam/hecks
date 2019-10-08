@@ -1,1 +1,0 @@
-require_relative 'queries/query_loader'

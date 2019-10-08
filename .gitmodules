@@ -19,3 +19,12 @@
 [submodule "hecks-active_model"]
 	path = hecks-active_model
 	url = git@github.com:thehecksteam/hecks-active_model.git
+[submodule "hecks-rails"]
+	path = hecks-rails
+	url = git@github.com:thehecksteam/hecks_on_rails.git
+[submodule "examples/hecks-examples-blog"]
+	path = examples/hecks-examples-blog
+	url = git@github.com:thehecksteam/hecks-examples-blog.git
+[submodule "examples/hecks-examples-blog_rails"]
+	path = examples/hecks-examples-blog_rails
+	url = git@github.com:thehecksteam/hecks-examples-blog_rails.git

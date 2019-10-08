@@ -83,20 +83,27 @@ bundle
 ```
 
 ## 7. Configure the application
+```
+rails g hecks:domain
+```
+Creates: 
 ```ruby
-# blog_rails/config/initializers/domain.db
+# blog_rails/config/initializers/domain.rb
 require 'hecks-adapters/dynamodb'
+
 Domain = HecksApp::ApplicationPort
 Domain.config do
-  domain Blog
+  domain  Blog
   adapter :Dynamodb
 end
-Hecks::ActiveModel.decorate
 ```
+The generator made note that we included the dynamodb adapter and the blog domain.
 
 ## 8. Create a resource
 ```bash
 rails generate scaffold users/user --no-migration -o false
+# Next Version:
+# rails g hecks:scaffold users/user
 ```
 
 ## 9. Add a `#new` method to the controller
@@ -109,7 +116,7 @@ class Users::UsersController < ApplicationController
 end
 ```
 
-## 11. Add a `#create` method to the controller
+## 10. Add a `#create` method to the controller
 ```ruby
 # blog_rails/app/controllers/bars/bar_controller.rb
 class Bars::BarsController < ApplicationController
@@ -130,7 +137,7 @@ class Bars::BarsController < ApplicationController
 end
 ```
 
-## 12. Add a `#show` method to the controller
+## 11. Add a `#show` method to the controller
 ```ruby
 def index
   @users_users = Domain[Users: :User].all
