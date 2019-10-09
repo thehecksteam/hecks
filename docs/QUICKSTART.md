@@ -25,7 +25,7 @@ end
 ```
 This defines a `domain` called foo with an `aggregate` called Bars, and a `root` called Bar with a name `field` and a single `operation` called UpdateName
 
-## 3. Test drive the operation (optional)
+## 3. Test the operation (optional)
 
 ```ruby
 # spec/bars/bar_spec.rb
@@ -99,47 +99,18 @@ end
 ```
 The generator made note that we included the dynamodb adapter and the blog domain.
 
-## 8. Create a resource
+## 8. Create a scaffold
 ```bash
-rails generate scaffold users/user --no-migration -o false
-# Next Version:
-# rails g hecks:scaffold users/user
+rails g hecks:scaffold users/user
+```
+Generates the artifacts as `rails scaffold` with tweaks to support our domain
+
+## 9. Start the server
+```bash
+rails s
 ```
 
-## 9. Add a `#new` method to the controller
-```ruby
-# blog_rails/app/controllers/users/users_controller.rb
-class Users::UsersController < ApplicationController
-  def new
-    @users_user = Domain[Users: :User].build(name: nil)
-  end
-end
-```
+## 10. Create a user
+In your browser, visit `localhost:3000/users/users/new`
 
-## 10. Add a `#create` method to the controller
-```ruby
-# blog_rails/app/controllers/bars/bar_controller.rb
-class Bars::BarsController < ApplicationController
-  # ...
-  def create
-    @users_user = Domain[Users: :User].build(users_user_params.to_h.symbolize_keys)
-
-    respond_to do |format|
-      if Domain[@users_user].save
-        format.html { redirect_to @users_user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @users_user }
-      else
-        format.html { render :new }
-        format.json { render json: @users_user.errors, status: :unprocessable_entity }
-      end
-    end  
-  end
-end
-```
-
-## 11. Add a `#show` method to the controller
-```ruby
-def index
-  @users_users = Domain[Users: :User].all
-end
-```
+That's it! We created a domain, injected a DynamoDB Repository and used Rails to create a new user.  Not bad.
