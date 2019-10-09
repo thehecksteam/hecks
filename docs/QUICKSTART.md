@@ -73,7 +73,7 @@ rails new blog_rails
 ## 6. Add the domain and hecks libraries to the Gemfile
 ```ruby
 # blog_rails/Gemfile
-gem 'blog', path: '../blog'
+gem 'blog', '0.0.1'
 gem 'hecks-active_model', '0.1.0'
 gem 'hecks-adapters-dynamodb', '0.1.0'
 ```
