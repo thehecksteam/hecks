@@ -7,9 +7,9 @@ This quickstart guide will show you how to create a simple domain using Hecks, c
 
 ## 1. Create a new project
 ```bash
-hecks new new Blog
+hecks new Blog
 ```
-This creates a new directory called foo with a Domainfile in it.
+This creates a new directory called blog with a Domainfile in it.
 ## 2. Define the domain
 ```ruby
 # foo/Domainfile
@@ -23,15 +23,15 @@ domain :Blog do
   end
 end
 ```
-This defines a `domain` called foo with an `aggregate` called Bars, and a `root` called Bar with a name `field` and a single `operation` called UpdateName
+This defines a `domain` called foo with an `aggregate` called Bars, and a `root` called Bar with a `field` calld `name` and a single `operation` called `UpdateName`.
 
 ## 3. Test the operation (optional)
 
 ```ruby
-# spec/bars/bar_spec.rb
+# spec/Users/user_spec.rb
 require 'spec_helper'
 
-describe Blog::Domain::Bars::Bar do
+describe Blog::Domain::Users::User do
   subject { described_class.new(name: 'Frog') }
   describe '#update_name' do
     it do
@@ -61,14 +61,15 @@ class UpdateName
   end
 end
 ```
-`#instance_eval` is used here because the domain object is immutable except through operations.  Setting `args = @args` is necessary for the instance eval block to see the args.
+`#instance_eval` is used here because the domain object is immutable except through operations.  Commands are allowed to change state, but have to do this trick. Setting `args = @args` is necessary for the instance eval block to see the args.
 
 Running rspec should pass now.
 
 ## 5. Generate a Rails project
 ```bash
-rails new blog_rails
+rails new blog_rails --skip-spring
 ```
+Currently Hecks on Rails generators are not compatible with Spring Preloader, thus, `--skip-spring`
 
 ## 6. Add the domain and hecks libraries to the Gemfile
 ```ruby

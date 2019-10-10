@@ -12,6 +12,7 @@ class Gems < Thor
     puts `cd examples/lean_coffee && gem build lean_coffee`
     puts `cd hecks-active_model && gem build hecks-active_model`
     puts `cd hecks-rails && gem build hecks_on_rails`
+    puts `cd examples/hecks-examples-blog && gem build blog`
   end
 
   desc 'install', ''
@@ -24,5 +25,6 @@ class Gems < Thor
     puts `cd examples/lean_coffee && gem install --no-document *.gem`
     puts `cd hecks-active_model && gem install --no-document *.gem`
     puts `cd hecks-rails && gem install --no-document *.gem`
+    puts `cd examples/hecks-examples-blog && gem install --no-document *.gem`
   end
 end
